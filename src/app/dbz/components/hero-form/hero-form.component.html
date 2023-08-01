@@ -1,0 +1,21 @@
+<h4>add character</h4>
+<form (submit)="addHero()">
+  <!-- ngModel se debe usar con el attr name -->
+  <input
+    class="form-control mb-2"
+    type="text"
+    placeholder="name character"
+    [(ngModel)]="hero.name"
+    name="name"
+  />
+  <input
+    class="form-control mb-2"
+    type="number"
+    placeholder="power"
+    [(ngModel)]="hero.power"
+    name="power"
+  />
+  <button class="btn btn-primary form-control" type="submit">add</button>
+</form>
+<br>
+<pre>{{ hero | json }}</pre>

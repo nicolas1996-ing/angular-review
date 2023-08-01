@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col">
+    <!-- enviar propiedades al hijo -->
+    <!-- recibir propiedades del hijo -->
+    <app-hero-list
+      [heroes]="this.getHeroes"
+      (idHeroDelete)="deleteHero($event)"
+    ></app-hero-list>
+  </div>
+  <div class="col">
+    <!-- escuchar un evento desde el hijo -->
+    <app-hero-form (newHeroFromSon)="addHero($event)"></app-hero-form>
+  </div>
+</div>

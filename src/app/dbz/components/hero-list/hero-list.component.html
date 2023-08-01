@@ -1,0 +1,63 @@
+<h4>Hero List</h4>
+
+<ul class="list-group">
+  <!-- props asociadas al *ngfor -->
+  <li
+    class="list-group-item d-flex justify-content-between"
+    *ngFor="
+      let hero of heroes;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+  >
+    <div >
+      <span class="text-primary">{{ i + 1 }}.</span>
+      <span>
+        {{ hero.name }}
+      </span>
+      --
+      <strong>
+        {{ hero.power }}
+      </strong>
+
+      [ <span>Is the first = {{ isFirst }} </span> ] [
+      <span>Is the last = {{ isLast }}</span
+      >]
+    </div>
+    <button class="btn btn-danger" (click)="deleteHero(hero.id)">x</button>
+  </li>
+</ul>
+
+<br />
+
+<!-- ngClass: clases condicionadas -->
+<ul class="list-group">
+  <!-- props asociadas al *ngfor -->
+  <li
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-success': isLast,
+      'list-group-item-primary': isEven
+    }"
+    *ngFor="
+      let hero of heroes;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+  >
+    <span class="text-primary">{{ i + 1 }}.</span>
+    <span>
+      {{ hero.name }}
+    </span>
+    --
+    <strong>
+      {{ hero.power }}
+    </strong>
+  </li>
+</ul>

@@ -1,0 +1,35 @@
+<h1>{{ hero.name | titlecase }}</h1>
+
+<dl>
+  <td>Name</td>
+  <dd>{{ capitalizeName }}</dd>
+  <td>Edad</td>
+  <dd>{{ hero.age }}</dd>
+  <td>Method</td>
+  <dd>{{ this.heroDescritpion }}</dd>
+  <td>Capitalized</td>
+  <dd>capitalized</dd>
+</dl>
+
+<button
+  class="btn btn-primary mx-2"
+  (click)="changeName()"
+  *ngIf="showBtnChangeName"
+>
+  change name
+</button>
+<button
+  class="btn btn-primary mx-2"
+  (click)="changeAge()"
+  *ngIf="showBtnChangeAge"
+>
+  change age
+</button>
+
+<button
+  class="btn btn-primary mx-2"
+  (click)="resetForm()"
+  
+>
+  reset-form
+</button>
