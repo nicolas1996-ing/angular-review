@@ -1,3 +1,7 @@
+# Deploy 
+
+https://jolly-shortbread-b6d7d5.netlify.app/
+
 # Bases
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
