@@ -1,6 +1,7 @@
 # Deploy 
 
 https://jolly-shortbread-b6d7d5.netlify.app/
+https://nicolas1996-ing.github.io/angular-review/
 
 # Bases
 
